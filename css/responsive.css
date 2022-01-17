@@ -1,0 +1,270 @@
+:root{
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --colore-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132,129,200,0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+   
+    --card-border-radius:2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+   
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+   
+    --box-shadow: 0px 0px var(--color-light);
+   }
+
+   /*======= DARK THEME VARAIBLES========*/
+
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+@media screen and (max-width: 1650px) {
+   .container{
+       width: 95%;
+       grid-template-columns: 12rem auto auto;
+   }
+   .right {
+       margin-right: 10px;
+   }
+}
+
+@media screen and (max-width: 1360px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 15rem auto auto;
+    }
+    main .insights{
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+
+    main .insights .sales {
+        width: 100%;
+        max-width: 800px;
+        min-width: 400px;
+    }
+    main .insights .income{
+        width: 100%;
+        max-width: 800px;
+    }
+    main .insights .expenses{
+        width: 100%;
+        max-width: 800px;
+    }
+    main .recent-orders td:last-child {
+        display: none;
+    }
+
+    .right {
+        max-width: 400px;
+    }
+}
+    @media screen and (max-width: 1000px) {
+        .container {
+            grid-template-columns: 7rem auto auto;
+        }
+
+        .top .logo {
+            display: none;
+        }
+
+        aside .responsive-logo {
+            display: block;
+        }
+        .top .responsive-logo img {
+            width: 80%;
+        }
+
+        aside .sidebar h3 {
+            display: none;
+        }
+
+        main{
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        
+    }
+    @media screen and (max-width: 890px) {
+        .container{
+            width: 95%;
+            grid-template-columns: 1fr;
+           }
+
+        aside {
+            position: fixed;
+            left: -100%;
+            background: var(--color-white);
+            width: 18rem;
+            z-index: 3;
+            box-shadow: 1rem 3rem 4rem var(--color-light);
+            height: 100vh;
+            padding-right: var(--card-padding);
+            display: none;
+            animation: showMenu 400ms ease forwards;
+            
+        }
+
+        @keyframes showMenu {
+            to{
+                left: 0;
+            }
+        }      
+
+        aside .sidebar h3 {
+            display: inline;
+        }
+
+        aside .sidebar a {
+            width: 100%;
+            height: 3.4rem;
+        }
+        aside .sidebar a:last-child {
+            position: absolute;
+            bottom: 5rem;
+        }
+
+        aside .close {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        main{
+            margin-top: 8rem;
+            padding: 0 1rem;
+        }
+
+        main .recent-orders {
+            position: relative;
+            margin: 3rem 0 0 0;
+            width: 100%;
+        }
+
+        main .recent-orders table {
+            width: 100%;
+            margin: 0;
+        }
+
+        .right {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        .right .top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            align-items: center;
+            padding: 0 0.8rem;
+            height: 4.6rem;
+            width: 100%;
+            background: var(--color-white);
+            margin: 0;
+            z-index: 2;
+            box-shadow: 0 1rem 1rem var(--color-light);
+        }
+
+        .right .top .theme-toggler {
+            width: 4.4rem;
+            position: absolute;
+            left: 66%;
+        }
+
+        .right .profile .info {
+            display: none;
+        }
+
+        .right .top button {
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            color: var(--color-dark);
+            position: absolute;
+            left: 1rem;
+        }
+
+        .right .top button span {
+            font-size: 2rem;
+        }
+
+        main .insights .sales {
+            min-width: 0px;
+        }
+
+        .right .logout{
+            display: none;
+        }
+
+        .right .top .responsive-logo1 {
+            display: block;
+        }
+        .right .top .responsive-logo1 img {
+            width: 40%;
+        }
+        .right .top button {
+            display: flex;
+            align-items: center;
+        }
+
+        main .insights .sales {
+            margin-right: 0px;
+        }
+        main .insights .income{
+            margin-right: 0px;
+        }
+        main .insights .expenses{
+            margin-right: 0px;
+        }
+        
+        .top .responsive-logo {
+           display: none;
+        }
+
+        .top .logo {
+            display: block;
+        }
+        .top .logo img {
+            width: 80%;
+            padding-left: 10px;
+            margin: 0;
+        }
+        .top {
+            margin: 0px;
+        }
+        aside .sidebar .logout{
+            display: block;
+            margin-top: 50%;
+        }
+
+
+    @media screen and (max-width: 500px) {
+    main .recent-orders td:first-child {
+        display: none;
+    }
+    main .recent-orders th:first-child{
+        display: none;
+    }
+    }
+    }
